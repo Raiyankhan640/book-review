@@ -1,0 +1,121 @@
+[
+    {
+        "id": 1,
+        "name": "The Official Guide to the GRE General Test",
+        "author": "Educational Testing Service",
+        "image": "/src/assets/banner.png",
+        "review": "A must-have for GRE aspirants, offering real test questions and comprehensive explanations straight from the test makers.",
+        "pages": 608,
+        "rating": 4.8,
+        "category": "Test Preparation",
+        "tags": ["GRE", "Official Guide", "Practice Tests"],
+        "publisher": "McGraw-Hill Education",
+        "year": 2017
+    },
+    {
+        "id": 2,
+        "name": "Manhattan Prep GRE Strategy Guides",
+        "author": "Manhattan Prep",
+        "image": "/src/assets/bookTwo.jpg",
+        "review": "An in-depth series that breaks down each section of the GRE, providing thorough strategies and practice questions.",
+        "pages": 1800,
+        "rating": 4.7,
+        "category": "Test Preparation",
+        "tags": ["GRE", "Strategy", "Comprehensive"],
+        "publisher": "Manhattan Prep Publishing",
+        "year": 2018
+    },
+    {
+        "id": 3,
+        "name": "5 lb. Book of GRE Practice Problems",
+        "author": "Manhattan Prep",
+        "image": "/src/assets/bookThree.jpg",
+        "review": "A massive collection of practice problems across all topics tested on the GRE, ideal for extra practice.",
+        "pages": 1032,
+        "rating": 4.6,
+        "category": "Test Preparation",
+        "tags": ["GRE", "Practice Problems", "Comprehensive"],
+        "publisher": "Manhattan Prep Publishing",
+        "year": 2019
+    },
+    {
+        "id": 4,
+        "name": "Kaplan GRE Prep Plus 2021",
+        "author": "Kaplan Test Prep",
+        "image": "/src/assets/bookFour.jpg",
+        "review": "A solid resource with a mix of strategy guides, practice tests, and online resources to help maximize your score.",
+        "pages": 708,
+        "rating": 4.5,
+        "category": "Test Preparation",
+        "tags": ["GRE", "Strategy", "Practice Tests"],
+        "publisher": "Kaplan Publishing",
+        "year": 2020
+    },
+    {
+        "id": 5,
+        "name": "Barron's GRE with Online Tests",
+        "author": "Sharon Weiner Green",
+        "image": "/src/assets/bookFive.jpg",
+        "review": "A trusted name in test prep, Barron's provides detailed reviews, practice tests, and online resources.",
+        "pages": 672,
+        "rating": 4.4,
+        "category": "Test Preparation",
+        "tags": ["GRE", "Review", "Practice Tests"],
+        "publisher": "Barron's Educational Series",
+        "year": 2019
+    },
+    {
+        "id": 6,
+        "name": "Princeton Review GRE Premium Prep, 2021",
+        "author": "The Princeton Review",
+        "image": "/src/assets/bookSix.jpg",
+        "review": "Offers strategies and tips for scoring high, with additional online practice tests and study plans.",
+        "pages": 688,
+        "rating": 4.6,
+        "category": "Test Preparation",
+        "tags": ["GRE", "Strategies", "Practice Tests"],
+        "publisher": "Princeton Review",
+        "year": 2021
+    },
+    {
+        "id": 7,
+        "name": "Cracking the GRE Premium Edition with 6 Practice Tests, 2022",
+        "author": "The Princeton Review",
+        "image": "/src/assets/bookSeven.jpg",
+        "review": "An all-in-one GRE prep book featuring detailed strategies, 6 practice tests, and online resources.",
+        "pages": 576,
+        "rating": 4.5,
+        "category": "Test Preparation",
+        "tags": ["GRE", "Strategies", "Practice Tests"],
+        "publisher": "Princeton Review",
+        "year": 2022
+    },
+    {
+        "id": 8,
+        "name": "GRE Prep by Magoosh",
+        "author": "Magoosh",
+        "image": "/src/assets/bookEight.jpg",
+        "review": "A comprehensive guide focusing on the most effective strategies and practice for acing the GRE, backed by Magoosh's expert instructors.",
+        "pages": 468,
+        "rating": 4.6,
+        "category": "Test Preparation",
+        "tags": ["GRE", "Strategies", "Practice Tests"],
+        "publisher": "Magoosh Publishing",
+        "year": 2020
+    },
+    {
+        "id": 9,
+        "name": "GRE Complete 2022: 3-Book Set",
+        "author": "Kaplan Test Prep",
+        "image": "/src/assets/bookNine.jpg",
+        "review": "A comprehensive 3-book set that offers an in-depth review of all GRE sections, including practice questions and online resources.",
+        "pages": 1500,
+        "rating": 4.7,
+        "category": "Test Preparation",
+        "tags": ["GRE", "Comprehensive", "Practice Tests"],
+        "publisher": "Kaplan Publishing",
+        "year": 2022
+    }
+    
+    
+]
