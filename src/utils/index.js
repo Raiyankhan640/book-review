@@ -18,7 +18,6 @@ export const saveBooks = (book, listType) => {
         return toast.error(`Already Added to ${listType === 'read' ? 'Read' : 'Wishlist'}!`);
     }
 
-    // Only check the opposite list if adding to the "Wishlist"
     if (listType === 'wish') {
         const readList = getBooks('read');
         const isInReadList = readList.find(b => b.id === book.id);
