@@ -1,8 +1,8 @@
-import toast from 'react-hot-toast'
+import { toast } from 'react-hot-toast';
 
-export const getBooks = () => {
+export const getBooks = (text) => {
     let books = [];
-    const storedBooks = localStorage.getItem('books');
+    const storedBooks = localStorage.getItem(text);
 
     if (storedBooks) {
         books = JSON.parse(storedBooks);
@@ -10,22 +10,25 @@ export const getBooks = () => {
     return books;
 }
 
-export const saveBooks = (book) => {
-    const books = getBooks();
-    const isExist = books.find(b => b.id === book.id);
+export const saveBooks = (book, listType) => {
+    const currentList = getBooks(listType);
+    const isInCurrentList = currentList.find(b => b.id === book.id);
 
-    if (isExist) {
-        return toast.error('Already Added to Wishlist!')
+    if (isInCurrentList) {
+        return toast.error(`Already Added to ${listType === 'read' ? 'Read' : 'Wishlist'}!`);
     }
 
-    books.push(book);
-    localStorage.setItem('books', JSON.stringify(books));
-    toast.success('Book Added to Wishlist Successfully!')
-}
+    // Only check the opposite list if adding to the "Wishlist"
+    if (listType === 'wish') {
+        const readList = getBooks('read');
+        const isInReadList = readList.find(b => b.id === book.id);
 
-export const deleteBook = id => {
-    let book = getBooks();
-    const remaining = book.filter(b => b.id !== id)
-    localStorage.setItem('books', JSON.stringify(remaining))
-    toast.success('Book Removed from Wishlist!')
+        if (isInReadList) {
+            return toast.error('Book already exists in the Read list!');
+        }
+    }
+
+    currentList.push(book);
+    localStorage.setItem(listType, JSON.stringify(currentList));
+    toast.success(`Book Added to ${listType === 'read' ? 'Read' : 'Wishlist'} Successfully!`);
 }

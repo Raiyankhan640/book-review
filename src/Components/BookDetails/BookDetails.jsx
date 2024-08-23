@@ -5,12 +5,16 @@ import { saveBooks } from '../../utils';
 const BookDetails = () => {
     const book = useLoaderData();
 
-    const handleAdToWish = (book) => {
-        saveBooks(book);
+    const handleAdToWish = () => {
+        saveBooks(book, 'wish');
+    }
+
+    const handleAdToRead = () => {
+        saveBooks(book, 'read');
     }
 
     return (
-        <div className="container mx-auto p-6 flex justify-center items-center min-h-screen">
+        <div className="container mx-auto p-6 flex justify-center items-center mb-28">
             <div className="flex flex-col md:flex-row gap-8 w-full max-w-5xl bg-white p-8 rounded-lg shadow-lg">
                 <div className="flex justify-center md:w-1/2">
                     <img src={book.image} alt={book.name} className="w-full max-w-sm rounded-lg shadow-lg" />
@@ -41,8 +45,8 @@ const BookDetails = () => {
                         <p><strong>Rating:</strong> {book.rating}</p>
                     </div>
                     <div className="flex gap-4 mt-6">
-                        <button onClick={()=> handleAdToWish(book)} className="bg-[#23be0a] hover:bg-green-700 text-white py-2 px-4 rounded-lg">Read</button>
-                        <button onClick={()=> handleAdToWish(book)} className="bg-[#b2dffc] hover:bg-blue-500 text-white py-2 px-4 rounded-lg">Wishlist</button>
+                        <button onClick={handleAdToRead} className="bg-[#23be0a] hover:bg-green-700 text-white py-2 px-4 rounded-lg">Read</button>
+                        <button onClick={handleAdToWish} className="bg-[#b2dffc] hover:bg-blue-500 text-white py-2 px-4 rounded-lg">Wishlist</button>
                     </div>
                 </div>
             </div>
