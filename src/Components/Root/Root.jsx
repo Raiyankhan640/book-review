@@ -6,7 +6,9 @@ import Footer from '../Footer/Footer';
 const Root = () => {
     return (
         <>
-            <Header></Header>
+            <div className='container mx-auto'>
+                <Header></Header>
+            </div>
             <Outlet></Outlet>
             <Footer></Footer>
         </>

@@ -8,6 +8,7 @@ import ListedBooks from './Components/ListedBooks/ListedBooks.jsx';
 import ErrorPage from './Components/ErrorPage/ErrorPage.jsx';
 import PagesToRead from './Components/PagesToRead/PagesToRead.jsx';
 import Books from './Components/Books/Books.jsx';
+import BookDetails from './Components/BookDetails/BookDetails.jsx';
 
 
 const router = createBrowserRouter([
@@ -28,6 +29,17 @@ const router = createBrowserRouter([
         path: "/pagesToRead",
         element: <PagesToRead />,
       },
+      {
+        path: "/bookDetails/:id",
+        element: <BookDetails />,
+        loader: async ({ params }) => {
+          const response = await fetch('/books.json');
+          const books = await response.json();
+          return books.find(book => book.id.toString() === params.id);
+        },
+      }
+
+
     ],
   },
 ]);
